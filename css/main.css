@@ -1,0 +1,39 @@
+/* main.css */
+
+/* Google Fonts */
+
+body {
+  font-family: "Lato", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Background */
+body {
+  background-color: #e5f7f9;
+}
+
+/* Rounded corners for images */
+img {
+  border-radius: 10px;
+}
