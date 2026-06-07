@@ -1,6 +1,6 @@
 /* main.css */
 
-/* Google Fonts */
+/* Fonts */
 
 body {
   font-family: "Lato", sans-serif;
@@ -10,30 +10,22 @@ body {
 h1 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-size: auto;
+  font-weight: 600;
   font-style: normal;
 }
 
 h2 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-h2 {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
 }
 
 /* Background */
 body {
-  background-color: #e5f7f9;
+  background-color: #dbeef1;
 }
 
 /* Rounded corners for images */
-img {
+/* img {
   border-radius: 10px;
-}
+}*/
