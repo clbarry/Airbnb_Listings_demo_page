@@ -15,7 +15,7 @@ h1 {
   font-style: normal;
 }
 
-h2 {
+h2, h3{
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
 }
@@ -26,6 +26,8 @@ body {
 }
 
 /* Rounded corners for images */
-/* img {
+/* 
+img {
   border-radius: 10px;
-}*/
+}
+*/
