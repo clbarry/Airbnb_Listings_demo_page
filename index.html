@@ -26,12 +26,38 @@
     <div class="container">
       <!--HEADER-->
       <header>
-        <h1>SF Airbnb Listings</h1>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-          </ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <h1>
+              <a class="navbar-brand" href="#">SF Airbnb Listings</a>
+            </h1>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    >Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">About</a>
+                </li>
+            </div>
+          </div>
         </nav>
       </header>
 
@@ -60,8 +86,9 @@
                     <div class="host">Holly</div>
                     <div class="price">$187.00</div>
                     <div class="rating">⭐️4.87</div>
-                    <div class="description overflow-scroll"
-                        style="max-height: 200px ;"
+                    <div
+                      class="description overflow-scroll"
+                      style="max-height: 200px"
                     >
                       "Our bright garden unit overlooks a lovely backyard area
                       with fruit trees and native plants. It is an oasis in a
@@ -93,7 +120,7 @@
                 </article>
               </div>
               <!-- /.listing -->
-  
+
               <!--Listing-->
               <div class="listing col-6">
                 <!--article for each card-->
@@ -112,8 +139,9 @@
                     <div class="host">Holly</div>
                     <div class="price">$187.00</div>
                     <div class="rating">⭐️4.87</div>
-                    <div class="description overflow-scroll"
-                        style="max-height: 200px ;"
+                    <div
+                      class="description overflow-scroll"
+                      style="max-height: 200px"
                     >
                       "Our bright garden unit overlooks a lovely backyard area
                       with fruit trees and native plants. It is an oasis in a
@@ -144,12 +172,12 @@
                   <!-- /.card-body -->
                 </article>
               </div>
-              <!-- /.listing -->              
+              <!-- /.listing -->
             </section>
             <!-- /.listings row -->
-            <br>
-            
-  <!--Section to group the listing row-->
+            <br />
+
+            <!--Section to group the listing row-->
             <section class="listings row">
               <!--Listing-->
               <div class="listing col-6">
@@ -169,8 +197,9 @@
                     <div class="host">Holly</div>
                     <div class="price">$187.00</div>
                     <div class="rating">⭐️4.87</div>
-                    <div class="description overflow-scroll"
-                        style="max-height: 200px ;"
+                    <div
+                      class="description overflow-scroll"
+                      style="max-height: 200px"
                     >
                       "Our bright garden unit overlooks a lovely backyard area
                       with fruit trees and native plants. It is an oasis in a
@@ -202,7 +231,7 @@
                 </article>
               </div>
               <!-- /.listing -->
-  
+
               <!--Listing-->
               <div class="listing col-6">
                 <!--article for each card-->
@@ -221,8 +250,9 @@
                     <div class="host">Holly</div>
                     <div class="price">$187.00</div>
                     <div class="rating">⭐️4.87</div>
-                    <div class="description overflow-scroll"
-                        style="max-height: 200px ;"
+                    <div
+                      class="description overflow-scroll"
+                      style="max-height: 200px"
                     >
                       "Our bright garden unit overlooks a lovely backyard area
                       with fruit trees and native plants. It is an oasis in a
@@ -253,27 +283,56 @@
                   <!-- /.card-body -->
                 </article>
               </div>
-              <!-- /.listing -->              
-
+              <!-- /.listing -->
             </section>
             <!-- /.listings row -->
-            <br>
-
-
+            <br />
           </div>
           <!-- /.col-lg-8 col-md-12 -->
 
           <div class="col-lg-4 col-md-12">
             <h2>Create Listing</h2>
-            <div class="temp">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
+            <!--Form to Create Listing-->
+            <form action="#">
+              <!--mb--3 form-input-->
+              <div class="mb-3">
+                <label class="form-label">
+                  <div>Title</div>
+                  <input type="text" class="form-control" name="title" />
+                </label>
+              </div>
+              <!-- /.mb-3 form-input-->
+
+              <!--mb--3 form-input-->
+              <div class="mb-3">
+                <label class="form-label">
+                  <div>Price</div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="price"
+                    value="200"
+                  />
+                </label>
+              </div>
+              <!-- /.mb-3 form-input-->
+
+              <!--mb--3 form-input-->
+              <div class="mb-3">
+                <label class="form-label">
+                  <div>Description</div>
+                  <input type="text" class="form-control" name="description" />
+                </label>
+              </div>
+              <!-- /.mb-3 form-input-->
+
+              <!-- action buttons-->
+              <div class="mb-3">
+                <button class="btn btn-primary" type="submit">Create</button>
+                <button class="btn btn-secondary">Cancel</button>
+              </div>
+              <!-- /.action buttons-->
+            </form>
           </div>
           <!-- /.col-lg-4 col-md-12 -->
         </div>
