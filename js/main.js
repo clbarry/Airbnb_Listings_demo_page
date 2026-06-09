@@ -1,11 +1,23 @@
-import Listings from "./Listings";
+/*import Listings from "./js/Listings"
 
-function MaineModule() {
-    const me = {};
+/* define constants */
+const inTitle = document.querySelector("#input-title")
+const inPrice = document.querySelector("#input-price")
+const inDescription = document.querySelector("#input-description")
+const btnCancel = document.querySelector("#btn-cancel")
 
-    const listings = Listings();
 
-    return me;
-}
 
-MaineModule();
+/* event handlers */
+
+/* cancel button */
+const onClickCancel = (event) => {
+    /* don't navigate to another page */
+    event.preventDefault();
+    inTitle.value = "";
+    inPrice.value = "200";
+    inDescription.value = "";
+}    
+
+btnCancel.addEventListener("click", onClickCancel);
+
