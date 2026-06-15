@@ -8,12 +8,12 @@ export default function Listings() {
   /* append listing to the page */
   /* object destructuring */
   const appendListing = ({title, price, description, host = 'Sally'}) => {
-    console.log("Append Listing", listing);
+    console.log("Append Listing", title);
 
-  const listingDiv = document.createElement('div');
-  listingDiv.className = 'listing col-6'
-  listingDiv.innerHTML = `<!--article for each card-->;
-        <article class="card">;
+    const listingDiv = document.createElement('div');
+    listingDiv.className = 'listing col-6';
+    listingDiv.innerHTML = `<!--article for each card-->
+        <article class="card">
           <img
             src="https://a0.muscache.com/pictures/b7c2a199-4c17-4ba6-b81d-751719d2dac6.jpg"
             class="card-img-top"
@@ -24,7 +24,7 @@ export default function Listings() {
             <h3>
               ${title}
             </h3>
-            <div class="host">Holly</div>
+            <div class="host">${host}</div>
             <div class="price">${price}</div>
             <div class="rating">⭐️4.87</div>
             <div
@@ -41,22 +41,36 @@ export default function Listings() {
           </div>
           <!-- /.card-body -->
         </article>
-      <!-- /.listing -->`
+      <!-- /.listing -->`;
+    listingsContainer.appendChild(listingDiv);
   };
-          
 
   /* event handler for creating a listing */
   const onCreate = (event) => {
-    event.preventDefault(); // avoid browser from doing typical refresh 
+    event.preventDefault(); // avoid browser from doing typical refresh
     console.log("🌺 On create listing", event);
 
     const formData = new FormData(form);
-    const listing = Object.fromEntries(formData.entries());
+    const newListing = Object.fromEntries(formData.entries());
+    appendListing(newListing);
+  };
+
+  const fetchListings = async () => {
+    console.log("🐰 Fetch Listings");
+    const response = await fetch("/api/listings");
+
+    if (!response.ok) {
+      console.error("Failed to fetch listings");
+      return;
+    }
+
+    const data = await response.json();
+    console.log("Fetched listings", data);
+    data.data.forEach(appendListing);
   };
 
   form.addEventListener("submit", onCreate);
-
-  appendListing(listing);
+  fetchListings();
 
   return listing;
 }
