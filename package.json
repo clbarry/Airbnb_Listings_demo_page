@@ -14,7 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/clbarry/Airbnb_Listings_demo_page/issues"
   },
@@ -26,6 +25,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.4.1",
+    "eslint-plugin-prettier": "^5.5.4",
     "globals": "^17.6.0",
     "typescript-eslint": "^8.60.1"
   }
