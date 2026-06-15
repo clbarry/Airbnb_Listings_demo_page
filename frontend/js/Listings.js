@@ -7,24 +7,24 @@ export default function Listings() {
 
   /* append listing to the page */
   /* object destructuring */
-  const appendListing = ({title, price, description, host = 'Sally'}) => {
-    console.log("Append Listing", title);
+  const appendListing = ({name, price, description, host_name = 'Sally', picture_url}) => {
+    console.log("Append Listing", name);
 
     const listingDiv = document.createElement('div');
     listingDiv.className = 'listing col-6';
     listingDiv.innerHTML = `<!--article for each card-->
         <article class="card">
           <img
-            src="https://a0.muscache.com/pictures/b7c2a199-4c17-4ba6-b81d-751719d2dac6.jpg"
+            src="${picture_url}"
             class="card-img-top"
-            alt="thumnail photo of an appartment, showing a double bed, a futon, and a rocking chair. The rocking chair and futon are arranged as a seating are with a small table."
+            alt="thumbnail photo of listing"
           />
 
           <div class="card-body">
             <h3>
-              ${title}
+              ${name}
             </h3>
-            <div class="host">${host}</div>
+            <div class="host">${host_name}</div>
             <div class="price">${price}</div>
             <div class="rating">⭐️4.87</div>
             <div
@@ -41,6 +41,7 @@ export default function Listings() {
           </div>
           <!-- /.card-body -->
         </article>
+        <br>
       <!-- /.listing -->`;
     listingsContainer.appendChild(listingDiv);
   };
