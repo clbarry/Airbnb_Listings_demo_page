@@ -134,6 +134,14 @@ dist
 .DS_Store
 *.DS_Store
 
+# Archive files
+.js/Archive.js
+js/Archive.js
+*js/Archive.js
+*.js/Archive.js
+
+
+
 =======
 node_modules
 >>>>>>> a2eaf54f14f786eedb59344c690c643eab45d2e0
